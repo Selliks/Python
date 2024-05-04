@@ -89,6 +89,12 @@ def resultats():
 
     if resultats_used == True:
         pass
+    elif computer_score >= 21 and score <= 21:
+        score_label = customtkinter.CTkLabel(right_frame, text="You won!")
+        score_label.pack()
+    elif score >= 21 and computer_score <= 21:
+        score_label = customtkinter.CTkLabel(right_frame, text="Defeat! Computer won!")
+        score_label.pack()
     elif computer_score <= 21 and score <= 21:
         if computer_score > score:
             score_label = customtkinter.CTkLabel(right_frame, text="Defeat! Computer won!")
